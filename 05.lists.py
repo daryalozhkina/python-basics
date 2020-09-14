@@ -1,24 +1,24 @@
 lesson_dates = ['19.05.15', '19.05.18', '19.05.19', '19.05.22']
 
-student_marks = [5, 4, 3, 2, 5]
+student_marks = [
+    5,
+    4,
+    3,
+    2,
+    5
+]
 
+lesson_dates_and_marks = [
+    ['19.05.15', 5],
+    ['19.05.18', 4],
+    ['19.05.19', 3],
+    ['19.05.22', 2],
+    ['19.05.22', 2],
 
-#i = 0
-#while i < len(student_marks):
-   # print(lesson_dates[i], 'оценка', student_marks[i])
-   # i += 1
-for item in student_marks:
-     print('оценка', item)
-
-
-for item in enumerate(student_marks):
-     print('оценка', item)
-     i, mark = item
-     print('оценка', item, 'или', i, mark)
-
-     for i, mark in enumerate(student_marks):
-         print('оценка', i,mark)
-  #  print(lesson_dates())
+]
+for lesson_date, mark in lesson_dates_and_marks:
+       #  print('оценка', i,mark)
+    print(lesson_date, 'оценка', mark)
 
 #user_full_name = ['Иван', 'Иванов']
 
