@@ -19,10 +19,8 @@ student_2_marks = [
  #   ['19.05.15', 5],
   #  ['19.05.18', 4],
    # ['19.05.19', 3],
-for lesson_date, mark in zip(lesson_dates, student_marks):
-    print(lesson_date, 'оценка', mark)
-    for lesson_date, mark in zip(lesson_dates_2, student_2_marks):
-        print(lesson_date, 'оценка', mark)
+for lesson_date, mark, mark_2 in zip(lesson_dates, student_2_marks, student_marks):
+    print(lesson_date, 'оценка', mark, mark_2)
 
 #user_full_name = ['Иван', 'Иванов']
 
