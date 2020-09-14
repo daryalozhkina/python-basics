@@ -1,5 +1,5 @@
 lesson_dates = ['19.05.15', '19.05.18', '19.05.19', '19.05.22']
-
+lesson_dates_2 = ['19.05.15', '19.05.18', '19.05.19', '19.05.22']
 student_marks = [
     5,
     4,
@@ -7,18 +7,22 @@ student_marks = [
     2,
     5
 ]
+student_2_marks = [
+    4,
+    3,
+    5,
+    5,
+    4
+]
 
 #lesson_dates_and_marks = [
  #   ['19.05.15', 5],
   #  ['19.05.18', 4],
    # ['19.05.19', 3],
-    #['19.05.22', 2],
-    #['19.05.22', 2],
-
-
 for lesson_date, mark in zip(lesson_dates, student_marks):
-       #  print('оценка', i,mark)
     print(lesson_date, 'оценка', mark)
+    for lesson_date, mark in zip(lesson_dates_2, student_2_marks):
+        print(lesson_date, 'оценка', mark)
 
 #user_full_name = ['Иван', 'Иванов']
 
