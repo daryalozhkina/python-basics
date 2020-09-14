@@ -8,15 +8,15 @@ student_marks = [
     5
 ]
 
-lesson_dates_and_marks = [
-    ['19.05.15', 5],
-    ['19.05.18', 4],
-    ['19.05.19', 3],
-    ['19.05.22', 2],
-    ['19.05.22', 2],
+#lesson_dates_and_marks = [
+ #   ['19.05.15', 5],
+  #  ['19.05.18', 4],
+   # ['19.05.19', 3],
+    #['19.05.22', 2],
+    #['19.05.22', 2],
 
-]
-for lesson_date, mark in lesson_dates_and_marks:
+
+for lesson_date, mark in zip(lesson_dates, student_marks):
        #  print('оценка', i,mark)
     print(lesson_date, 'оценка', mark)
 
