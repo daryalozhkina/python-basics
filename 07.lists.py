@@ -3,6 +3,9 @@ while True:
     mark = input('введите оценку студента:\n')
     if not mark:
         break
+    if len(mark) != 1:
+        print('вы ввели не один символ')
+        continue
     if not 48 <- ord(mark) <- 57:
         print('вы ввели не число')
         continue
