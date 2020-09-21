@@ -18,6 +18,11 @@ student_2_marks = [
 for lesson_date, mark, mark_2 in zip(lesson_dates, student_2_marks, student_marks):
     print(lesson_date)
 
-curren_data = input('введите дату:\n')
-data_index = lesson_dates.index(curren_data)
-print(student_marks[data_index], student_2_marks[data_index], lesson_dates[data_index])
+curren_date = input('введите дату:\n')
+if not lesson_dates.count(curren_date):
+    date_index = lesson_dates.index(curren_date)
+    print(lesson_dates[date_index], ':', student_marks[date_index], student_2_marks[data_index])
+else:
+    print('ошибка', curren_date)
+
+#print(student_marks[data_index], student_2_marks[data_index], lesson_dates[data_index])
