@@ -9,6 +9,17 @@ while True:
    # if not 48 <- ord(mark) <- 57:
     #    print('вы ввели не число')
     #    continue
+
+    if mark.isdigit():
+        mark = int(mark)
+        if 1 <= mark <= 5:
+            student_marks.append(mark)
+        elif mark > 5:
+            print('Оценка больше 5')
+        elif mark < 1:
+            print('Оценка меньше 1')
+    else:
+        print('ошибка', mark)
     try:
         mark = int(mark)
         if 1 <= mark <= 5:
@@ -16,7 +27,7 @@ while True:
         elif mark > 5:
             print('Оценка больше 5')
         elif mark < 1:
-            print('Оценка больше 1')
+            print('Оценка меньше 1')
     except ValueError as e:
         print('ошибка значения', e)
     except TypeError as e:
