@@ -10,7 +10,10 @@ correct_result = ['Полина', 'Антон', 'Арсений', 'Евгени�
     #print(item, '->', item.strip())
 #    result.append(item.strip())
 
-result = list(map(str.strip, class_pupils.split(', ')))
+#result = list(map(str.strip, class_pupils.split(',')))
+result = [item.strip() for item in class_pupils.split(',')]
+
+print(result)
 assert result == correct_result, 'алгоритм реализован неверно'
 #if not result == correct_result:
  #   ralse result == correct_result, 'алгоритм реализован неверно'
