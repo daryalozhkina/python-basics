@@ -4,12 +4,13 @@ class_pupils = 'Полина, Антон, Арсений, Евгений, Але
 correct_result = ['Полина', 'Антон', 'Арсений', 'Евгений', 'Алексей', 'Тимур']
 #print('ученики класса:', class_pupile)
 
-_result = class_pupils.split(', ')
-result = []
-for item in _result:
+#_result = class_pupils.split(', ')
+#result = []
+#for item in _result:
     #print(item, '->', item.strip())
-    result.append(item.strip())
+#    result.append(item.strip())
 
+result = list(map(str.strip, class_pupils.split(', ')))
 assert result == correct_result, 'алгоритм реализован неверно'
 #if not result == correct_result:
  #   ralse result == correct_result, 'алгоритм реализован неверно'
