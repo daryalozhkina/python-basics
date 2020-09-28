@@ -42,9 +42,9 @@ src_data = '''
 '''
 for row in src_data.split('\n'):
     #print(row)
-    if not row:
-        continue
-
+   # if not row:
+     #   continue
+    try:
     remote_IP_address, row_tail = row.split(maxsplit=1)
     _, _request_datetime = row_tail.split('[', maxsplit=1)
     request_datetime, row_tail = _request_datetime.split(']', maxsplit=1)
@@ -55,4 +55,6 @@ for row in src_data.split('\n'):
     parsed_row = [remote_IP_address, request_datetime, request_method, requested_resource]
     parsed_row = list(map(str.strip, parsed_row))
     print(parsed_row)
+    except Exception as e:
+    print('error', e)
 
