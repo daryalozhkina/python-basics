@@ -1,8 +1,6 @@
 src_data_file = 'nginx_logs_head.txt'
 parsed_data_file = 'nginx_logs_parsed.txt'
 
-parsed_data = []
-
 def row_parse(row):
     remote_IP_address, row_tail = row.split(maxsplit=1)
     _, _request_datetime = row_tail.split('[', maxsplit=1)
@@ -23,6 +21,9 @@ def file_parse(f_name: str) -> list:
                 parsed_row = row_parse(row)
                 parsed_data.append(parsed_row)
         return  parsed_data
+
+def file_parse_adv():
+    pass
 
 def save_parsed_data(f_name, data):
     with open(parsed_data_file, 'w', encoding='utf-8') as f:
